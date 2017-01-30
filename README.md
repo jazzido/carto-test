@@ -1,6 +1,8 @@
 # CARTO Test #1
 
-This repository contains an implementation for the Test #1 proposed by CARTO.
+This repository contains an implementation for Test #1 proposed by CARTO.
+
+A live instance of the application is available at: [https://carto-test-xxtmozvrzn.now.sh](https://carto-test-xxtmozvrzn.now.sh). The source code of the running instance can be explored at [https://carto-test-xxtmozvrzn.now.sh/_src](https://carto-test-xxtmozvrzn.now.sh/_src)
 
 ![Screenshot](http://dump.jazzido.com/carto_shot.png)
 
