@@ -33,13 +33,13 @@ export default class MapContainer extends React.Component {
         Promise.all(
             [
                 getBreaks(variable, 5),
-                getTransformedGeometries(variable)
+                getTransformedGeometries(variable, 5)
             ])
                .then(([breaks, geoms]) => {
                    this.setState({
                        breaks: breaks,
-                       geometries: geoms,
-                       loader: false
+                       loader: false,
+                       geometries: geoms
                    })
                });
     }
@@ -58,7 +58,9 @@ export default class MapContainer extends React.Component {
         const MapComponent = MapComponents[this.props.renderer];
         return (
             <div className="map-container">
-                {this.state.loader ? <div className="loader">Loading…</div> : <MapComponent geometries={this.state.geometries} breaks={this.state.breaks}/>}
+                <div className="loader-overlay" style={{visibility: this.state.loader ? 'visible' : 'hidden' }}></div>
+                <div className="loader" style={{visibility: this.state.loader ? 'visible' : 'hidden' }}>Loading…</div>
+                <MapComponent geometries={this.state.geometries} breaks={this.state.breaks} />
                 {this.state.loader ? null : Legend(this.state.breaks)}
             </div>
         );

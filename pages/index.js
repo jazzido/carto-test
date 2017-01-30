@@ -15,13 +15,12 @@ export default class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            renderer: 'svg',
+            renderer: 'canvas',
             variable: 'numfloors'
         };
     }
 
     onVariableChanged(e) {
-        console.log({variable: e.currentTarget.value});
         this.setState({variable: e.currentTarget.value});
     }
 
@@ -32,8 +31,12 @@ export default class Index extends React.Component {
     render() {
         return (
             <Page>
-                <section className="container">
-                    <h1>CartoDB Test #1</h1>
+                <section className="container" style={ {marginTop:'1em', marginBottom: '1em'} }>
+                    <div className="row" style={ { marginBottom: '1em' } }>
+                        <h1 className="column">Carto Test #1</h1>
+                        <p className="column vcard"><a className="url fn" href="http://jazzido.com/" style={{ fontSize:'1.5em' }}>Manuel Aristarán</a><br /> <i className="fa fa-envelope "></i> <a href="mailto:manuel@jazzido.com">manuel@jazzido.com</a> <i className="fa fa-github-alt"></i> <a href="https://github.com/jazzido">jazzido</a></p>
+                    </div>
+
                     <form>
                         <fieldset>
                             <div className="row">
@@ -51,13 +54,14 @@ export default class Index extends React.Component {
                                     <label htmlFor="renderer">Renderer:</label>
                                     <div className="row">
                                         <div className="column">
-                                            <input id="rendererSVG" type="radio" name="renderer" value="svg" checked={this.state.renderer === "svg"} onChange={this.onRendererChanged.bind(this)} />
-                                            <label className="label-inline" htmlFor="rendererSVG">SVG</label>
-                                        </div>
-                                        <div className="column">
                                             <input id="rendererCanvas" type="radio" name="renderer" value="canvas" checked={this.state.renderer === "canvas"} onChange={this.onRendererChanged.bind(this)}/>
                                             <label className="label-inline" htmlFor="rendererCanvas">Canvas</label>
                                         </div>
+                                        <div className="column">
+                                            <input id="rendererSVG" type="radio" name="renderer" value="svg" checked={this.state.renderer === "svg"} onChange={this.onRendererChanged.bind(this)} />
+                                            <label className="label-inline" htmlFor="rendererSVG">SVG</label>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
