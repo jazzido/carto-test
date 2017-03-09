@@ -1,5 +1,23 @@
 # CARTO Test #1
 
+In February 2016 I interviewed for a position at [CARTO](http://carto.com/). This is my solution for one of their take-home tests:
+
+*The objective is to render this dataset in a browser https://rambo-test.cartodb.com/tables/mnmappluto/public/map*
+
+*The rules are:*
+
+  - *no geo or rendering libraries allowed, use whatever technology you want (SVG, canvas, webgl...) but no d3, leaflet, gmaps, three.js or other mapping/rendering library. DOM, ajax and other non geo related stuff can be done with jQuery or any library you decide.*
+  - *you need to fetch the data from CARTO (using our SQL API)*
+  - *rendering the basemap and the labels is not needed, just the data*
+  - *take all the time you need to finish it*
+
+*Bonus points:*
+
+  - *load and rendering time is important, think how to reduce those*
+  - *panning and zooming*
+
+<hr />
+
 This repository contains an implementation for Test #1 proposed by CARTO.
 
 A live instance of the application is available at: [https://carto-test-xxtmozvrzn.now.sh](https://carto-test-xxtmozvrzn.now.sh). The source code of the running instance can be explored at [https://carto-test-xxtmozvrzn.now.sh/_src](https://carto-test-xxtmozvrzn.now.sh/_src)
